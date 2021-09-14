@@ -1,0 +1,34 @@
+<!DOCTYPE html> {% load static %}
+<html lang="en">
+
+<head>
+    <title>base</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{% static 'geekymini/css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'geekymini/css/style.css' %}" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container-fluid bg-dark">
+        {% include 'geekymini/navbar.html' %}
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                {% block msg %} {% endblock msg %}
+            </div>
+        </div>
+        <div class="row">
+            {% block side %} {% endblock side %} {% block content %} {% endblock content %}
+        </div>
+    </div>
+    <script src="{% static 'geekymini/js/bootstrap.js'%}"></script>
+    <script src="{% static 'geekymini/js/jquerey.js'%}"></script>
+    <script src="{% static 'geekymini/js/popper.js'%}"></script>
+
+
+</body>
+
+</html>
